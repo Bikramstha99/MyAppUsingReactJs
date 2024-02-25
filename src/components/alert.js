@@ -7,8 +7,10 @@ export default function Alert(props) {
 ;  }
   return (
     //if props.alert is already null then no need to go to div else go to div
-    props.alert && <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
+    <div style={{height:'50px'}}>
+    {props.alert && <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
         <strong>{capitalize(props.alert.type)}</strong>:{props.alert.msg}
+    </div>}
     </div>
   )
 }
